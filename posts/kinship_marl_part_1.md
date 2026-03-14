@@ -51,9 +51,9 @@ But what drives social species to cooperate outside of their kin, and, why did h
 
 The answer is **valuable _shared resources_** such as territories.
 
-Territories are essential to social animals. They serve as a place to store resources, raise vulnerable offspring, and safely sleep. Just as the cellular membrane makes the cell possible, the territorial frontier makes society possible. In both cases, the boundaries are needed to coordinate the parts and tell them which regions need to be maintained and which do not; where order should be preserved and where entropy may rise.
+A key argument of _The Sovereign Individual_ [7] is that our transition from hunter-gatherer to agricultural societies shifted power from strong individuals to organized violence. Farming made territories far more valuable: each harvest demanded months of labor, and the goods had to be stored and defended in place. This created agricultural surpluses worth seizing, something that was not worth the effort in foraging societies where there was so little stored wealth to take. The result: larger groups that could better raid, conquer, and defend these surpluses held a decisive advantage.
 
-Farming made territories far more valuable. Each harvest demanded months of labor, and the goods couldn’t be easily carried; they had to be stored and defended in place. This sparked a social arms race: groups capable of larger-scale cooperation could more easily attack or protect the immense wealth stored in farms. But larger groups bring new problems: kinship ties grow weaker, and members can no longer interact repeatedly with everyone, undermining simple strategies like _tit-for-tat_. The more value farms held, the more evolution favored bigger groups — and the more sophisticated social intelligence had to become. Success depended not only on social behaviors like identity recognition, reputation tracking, and promise-making, but also on new innovations like arithmetic for accounting and taxation.
+This sparked a social arms race. To form increasingly larger groups, agents had to learn to cooperate with increasingly distant relatives and to overcome the trust issues inherent in collaborating with others who have divergent goals. This required social and technological innovations: identity recognition, status hierarchies, reputation tracking, communication, and the ability to make and enforce promises.
 
 We’ve now identified the second key property for the emergence of human-like intelligence: **the environment should benefit agents that collaborate in larger groups** (for example, with the existence of shared resources).
 
@@ -205,3 +205,5 @@ The observation space of each agent is made of the following components:
 [5] Suarez, Joseph, et al. "Neural MMO 2.0: a massively multi-task addition to massively multi-agent learning." Advances in Neural Information Processing Systems 36 (2023): 50094-50104.
 
 [6] Suarez, Joseph. "Pufferlib 2.0: Reinforcement learning at 1m steps/s." Reinforcement Learning Conference. 2025.
+
+[7] Davidson, James Dale, and William Rees-Mogg. The sovereign individual: Mastering the transition to the information age. Simon & Schuster, 1997.
