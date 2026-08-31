@@ -54,8 +54,8 @@
         
     </div>
     <p><em>Published on 2026-08-31</em></p>
-    <p>AI safety today is mostly about training: train the model to do more “good” and less “bad”. Once training ends, so does the safety work.</p>
-<p>We also educate children to be well behaved. But that is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is done (when you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.</p>
+    <p>AI safety today is mostly about training: teach the model to do more “good” and less “bad”.</p>
+<p>We also educate children to be well behaved. But that is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is done (and you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.</p>
 <p>AI safety should be more about the latter. AI brings new risks, but taking inspiration from what already works for humans is an excellent start.</p>
 <h2 id="how-do-we-keep-the-world-safe-from-humans">How do we keep the world safe from humans?</h2>
 <p>If you misbehave you lose money (a fine) or time (jail) or both. For that to work we need two things: know who did it (credit assignment), and be able to punish them. Humans build this into every interaction, so that misbehaving costs more than the damage done. To rent a room or a car you show your ID or leave a deposit. To sell to other people you register a business.</p>
@@ -64,7 +64,7 @@
 <p>I am diving right into a concrete and crazy idea, however, I am trusting you to be smart and extract the general principles instead of focusing on the exact tunable parameters:</p>
 <h3 id="httpi-a-new-protocol">httpi: a new protocol</h3>
 <p>https does two jobs. It proves the server is who it says it is (it had to register and get a certificate), and it stops anyone else from listening.</p>
-<p>httpi adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own. In httpi there is one identity layer shared by everyone, and only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).</p>
+<p>httpi adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own. In httpi there is one identity layer shared by everyone, like https already does for servers, and only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).</p>
 <p>Every human gets a free rate limit. Businesses don’t: they need a deposit. Anyone, human or business, can deposit more to raise their limit.</p>
 <p>Both sides keep logs of every interaction for a few days. If someone misbehaves, the logs go to an automatic court (more on that below), which can lower their rate limit or take their deposit.</p>
 <p>Punishment takes the deposit first. If the harm is bigger than the deposit, the rest lands on the humans behind the business, in proportion to their share, and through them on every other business they own. You can’t hide behind a new business.</p>

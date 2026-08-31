@@ -12,9 +12,9 @@ tags:
   - AI safety
 ---
 
-AI safety today is mostly about training: train the model to do more “good” and less “bad”. Once training ends, so does the safety work.
+AI safety today is mostly about training: teach the model to do more “good” and less “bad”.
 
-We also educate children to be well behaved. But that is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is done (when you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.
+We also educate children to be well behaved. But that is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is done (and you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.
 
 AI safety should be more about the latter. AI brings new risks, but taking inspiration from what already works for humans is an excellent start.
 
@@ -32,7 +32,7 @@ I am diving right into a concrete and crazy idea, however, I am trusting you to 
 
 https does two jobs. It proves the server is who it says it is (it had to register and get a certificate), and it stops anyone else from listening.
 
-httpi adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own. In httpi there is one identity layer shared by everyone, and only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).
+httpi adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own. In httpi there is one identity layer shared by everyone, like https already does for servers, and only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).
 
 Every human gets a free rate limit. Businesses don’t: they need a deposit. Anyone, human or business, can deposit more to raise their limit.
 
