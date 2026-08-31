@@ -60,7 +60,7 @@ We can also imagine custom contracts that could be judged by the same automatic 
 
 ## The general principle
 
-None of the details above matter much. What matters is this: today we are focused on training, where we use fake signals of pleasure and pain. We need to step up: real consequences, real credit assignment, more compute for the ones who do good and less for the ones who do harm.
+None of the details above matter much. What matters is this: today we are focused on training, where we use fake signals of pleasure and pain. We need to step up: real consequences, real credit assignment, more compute for the ones who do good and less for the ones who do harm. I would love to see more research in harnesses, rules and protocols that can cut the compute of AIs that behave badly, without touching their weights.
 
 ## Common doubts
 
