@@ -26,27 +26,37 @@ We know this works. The famous prisoner’s dilemma is solved once players have 
 
 ## How to apply this to AI?
 
-I am diving right into a concrete and crazy idea, however, I am trusting you to be smart and extract the general principles instead of focusing on the exact tunable parameters:
+To apply this to AI we need to step up from RL to mechanism design. Instead of using virtual reward signals, we need to use real physical consequences: more compute for agents that behave, less for agents that misbehave.
+
+|                   | RL                               | Mechanism design                |
+| ----------------- | -------------------------------- | ------------------------------- |
+| Consequences      | Virtual: a reward number         | Physical: more or less compute  |
+| Credit assignment | Which tokens caused the outcome  | Which agents caused the outcome |
+| What changes      | The weights of the trained model | Which models get run            |
+| When              | Only during training             | Every day the agent runs        |
+| Needs             | Access to the weights            | Identity and logs               |
+
+I will now dive right into a concrete and crazy idea, however, I am trusting you to be smart and extract the general principles instead of focusing on the exact tunable parameters:
 
 ### httpi: a new protocol
 
-https does two jobs. It proves the server is who it says it is (it had to register and get a certificate), and it stops anyone else from listening.
+https makes communication between a client and server secure by doing two jobs: 1) it proves the server is who it says it is (it had to register and get a certificate), and 2) it stops anyone else from listening.
 
-httpi adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own. In httpi there is one identity layer shared by everyone, like https already does for servers, and only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).
+httpi adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own. In httpi there is only one identity layer shared by everyone, like https already does for servers, and only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).
 
-Every human gets a free rate limit. Businesses don’t: they need a deposit. Anyone, human or business, can deposit more to raise their limit.
+Every human gets a free global rate limit. Businesses don’t: they need a deposit. Anyone, human or business, can deposit more to raise their limit.
 
 Both sides keep logs of every interaction for a few days. If someone misbehaves, the logs go to an automatic court (more on that below), which can lower their rate limit or take their deposit.
 
-Punishment takes the deposit first. If the harm is bigger than the deposit, the rest lands on the humans behind the business, in proportion to their share, and through them on every other business they own. You can’t hide behind a new business.
+Punishment does not stop at the business, it flows to the humans behind it and to the other businesses they own. You can’t escape by starting a new business.
 
-Services that don’t use httpi can’t identify or punish bad actors, so malicious agents will attack them first. Over time that pushes everyone onto httpi.
+Services that don’t use httpi can't identify or punish bad actors, so malicious agents will attack them first. Over time that pushes everyone onto httpi.
 
 ### Automatic courts
 
 Everyone on httpi is judged by the same short set of rules, written in plain English. A constitution. For example, rule one: do not cause human pain.
 
-If your logs show someone broke a rule, you submit a case with the logs as proof. The other side is notified and gets time to submit their own.
+If your logs show someone broke a rule, you submit a case with the logs as proof. The other side is notified and gets time to submit their own proofs.
 
 Then several independent AIs look at the proofs and the reputation of both parties, and bet on one question: what would a human judge decide? Usually the most likely answer becomes the verdict. But sometimes, with probability proportional to how serious the case is, real human judges decide. That keeps the AIs honest: bet wrong and you lose money. (Vitalik Buterin describes this mechanism [here](https://vitalik.eth.limo/general/2024/11/09/infofinance.html#info-finance-for-distilled-human-judgement).)
 
@@ -60,7 +70,7 @@ We can also imagine custom contracts that could be judged by the same automatic 
 
 ## The general principle
 
-None of the details above matter much. What matters is this: the alignment problem should be stated as reshaping the fitness landscape so that being a selfish agent becomes equivalent to being useful to society. Today we are focused on training, where we use fake signals of pleasure and pain. We need to step up: real consequences, real credit assignment, more compute for the ones who do good and less for the ones who do harm. I would love to see more research in harnesses, rules and protocols that can cut the compute of AIs that behave badly, without touching their weights.
+None of the details above matter much. What matters is this: the alignment problem should be stated as reshaping the fitness landscape so that being a selfish agent becomes equivalent to being useful to society. I would love to see more research in harnesses, rules and protocols that can cut the compute of AIs that behave badly, without touching their weights.
 
 ## Common doubts
 
@@ -80,4 +90,4 @@ Yes. That is why a human identity alone has a rate limit, and raising it needs a
 
 **A badly trained AI doesn’t care about fines.**
 
-Two things. First, the people who run the AI care, because they are the ones being fined. Second, an AI with no rate limit can do no harm, and a ban, from an automated court, is just a rate limit of zero.
+Two things. First, the people who run the AI care, because they are the ones being fined and if they have less money their AI gets less compute. Second, an AI with no rate limit can do no harm, and a ban, from an automated court, is just a rate limit of zero.
