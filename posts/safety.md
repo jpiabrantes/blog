@@ -14,7 +14,7 @@ tags:
 
 AI safety today is mostly about training: teach the model to do more “good” and less “bad”.
 
-We also educate children to be well behaved. That is needed, but is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is done (and you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.
+We also educate children to be well behaved. That is needed, but is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is mostly done (and you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.
 
 AI safety should be more about the latter. AI brings new risks, but taking inspiration from what already works for humans is an excellent start.
 
