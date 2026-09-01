@@ -14,7 +14,7 @@ tags:
 
 AI safety today is mostly about training: teach the model to do more “good” and less “bad”.
 
-We also educate children to be well behaved. But that is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is done (and you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.
+We also educate children to be well behaved. That is needed, but is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is done (and you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.
 
 AI safety should be more about the latter. AI brings new risks, but taking inspiration from what already works for humans is an excellent start.
 
@@ -60,7 +60,7 @@ We can also imagine custom contracts that could be judged by the same automatic 
 
 ## The general principle
 
-None of the details above matter much. What matters is this: today we are focused on training, where we use fake signals of pleasure and pain. We need to step up: real consequences, real credit assignment, more compute for the ones who do good and less for the ones who do harm. I would love to see more research in harnesses, rules and protocols that can cut the compute of AIs that behave badly, without touching their weights.
+None of the details above matter much. What matters is this: the alignment problem should be stated as reshaping the fitness landscape so that being a selfish agent becomes equivalent to being useful to society. Today we are focused on training, where we use fake signals of pleasure and pain. We need to step up: real consequences, real credit assignment, more compute for the ones who do good and less for the ones who do harm. I would love to see more research in harnesses, rules and protocols that can cut the compute of AIs that behave badly, without touching their weights.
 
 ## Common doubts
 
