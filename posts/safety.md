@@ -1,6 +1,7 @@
 ---
 template: post
 title: We already keep the world safe from AGI (humans). Let’s do the same for AI.
+subtitle: From virtual rewards to physical consequences
 slug: keep-the-world-safe-from-ai
 draft: false
 date: 2026-08-31T00:00:00.000Z
@@ -14,7 +15,7 @@ tags:
 
 AI safety today is mostly about training: teach the model to do more “good” and less “bad”.
 
-We also educate children to be well behaved. That is needed, but is not what keeps the world safe from humans (AGI). The real safety mechanisms kick in after training is mostly done (and you are of age): we give more resources to people who do “good” and take them away from people who do “bad”.
+We also educate children to be well behaved. That is needed, but is not what keeps the world safe from humans (AGI). The real safety mechanism is **physical** and kicks in after “pre-training” (when we turn 18): we give more resources to people who do “good” and take them away from people who do “bad”.
 
 AI safety should be more about the latter. AI brings new risks, but taking inspiration from what already works for humans is an excellent start.
 
@@ -40,13 +41,13 @@ I will now dive right into a concrete and crazy idea, however, I am trusting you
 
 ### httpi: a new protocol
 
-https makes communication between a client and server secure by doing two jobs: 1) it proves the server is who it says it is (it had to register and get a certificate), and 2) it stops anyone else from listening.
+http**s** makes communication between a client and server secure by doing two jobs: 1) it proves the server is who it says it is (the server had to register and get a certificate), and 2) it stops anyone else from listening.
 
-httpi adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own. In httpi there is only one identity layer shared by everyone, like https already does for servers, and only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).
+http**i** adds a third job: the client has to prove who it is too. Logins already do this, but every service has its own, so reputation, punishments and bans from one mean nothing anywhere else. httpi has one identity layer shared by everyone, the same way https already works for servers. And only two kinds of identity: human or business. A business is just a weighted list of humans (its shareholders).
 
 Every human gets a free global rate limit. Businesses don’t: they need a deposit. Anyone, human or business, can deposit more to raise their limit.
 
-Both sides keep logs of every interaction for a few days. If someone misbehaves, the logs go to an automatic court (more on that below), which can lower their rate limit or take their deposit.
+Both sides keep logs of every interaction for a few days. If someone misbehaves, the logs go to an automatic court (more on that below), which can lower their rate limit or take their deposit. A rate limit of zero essentially puts the AI owner in a sandbox if everyone is using httpi.
 
 Punishment does not stop at the business, it flows to the humans behind it and to the other businesses they own. You can’t escape by starting a new business.
 
@@ -56,7 +57,7 @@ Services that don’t use httpi can't identify or punish bad actors, so maliciou
 
 Everyone on httpi is judged by the same short set of rules, written in plain English. A constitution. For example, rule one: do not cause human pain.
 
-If your logs show someone broke a rule, you submit a case with the logs as proof. The other side is notified and gets time to submit their own proofs.
+If your logs show someone broke a rule, you submit a case with the signed logs as proof. The other side is notified and gets time to submit their own proofs.
 
 Then several independent AIs look at the proofs and the reputation of both parties, and bet on one question: what would a human judge decide? Usually the most likely answer becomes the verdict. But sometimes, with probability proportional to how serious the case is, real human judges decide. That keeps the AIs honest: bet wrong and you lose money. (Vitalik Buterin describes this mechanism [here](https://vitalik.eth.limo/general/2024/11/09/infofinance.html#info-finance-for-distilled-human-judgement).)
 
@@ -64,7 +65,7 @@ If the logs show a real crime, the identities are revealed and the humans behind
 
 ### Automatic contracts
 
-Using httpi is signing a standard contract. The terms are always the same: I sign the messages I send, I keep logs, I accept the court’s verdict. Every request is a handshake on those terms.
+Using httpi is signing a standard contract. The terms are always the same: I sign the messages I send, I keep logs, I accept the court’s verdict.
 
 We can also imagine custom contracts that could be judged by the same automatic courts. But the internet is already full of custom terms and custom logins, and that is exactly why each service is vulnerable in its own way. The value of httpi is that there is a standard contract and identity.
 
@@ -72,9 +73,9 @@ We can also imagine custom contracts that could be judged by the same automatic 
 
 None of the details above matter much. What matters is this: the alignment problem should be stated as reshaping the fitness landscape so that being a selfish agent becomes equivalent to being useful to society. I would love to see more research in harnesses, rules and protocols that can cut the compute of AIs that behave badly, without touching their weights.
 
-## Common doubts
+## Common counter-arguments & doubts
 
-**A human prompts an AI. Whose identity is used, the human’s or the company’s?**
+**A human prompts an AI. Whose identity is used, the human’s or the AI company’s?**
 
 If the AI runs on the human’s computer, the human’s. If it runs on a company’s server, the company’s.
 
@@ -90,4 +91,4 @@ Yes. That is why a human identity alone has a rate limit, and raising it needs a
 
 **A badly trained AI doesn’t care about fines.**
 
-Two things. First, the people who run the AI care, because they are the ones being fined and if they have less money their AI gets less compute. Second, an AI with no rate limit can do no harm, and a ban, from an automated court, is just a rate limit of zero.
+That’s the point. They don’t need to care, a fine is a real consequence and it leads to less money which leads to less compute. Also, the punishment can be a decrease in the rate limit, and an AI owner with a rate limit of 0 is simply in a sandbox.
